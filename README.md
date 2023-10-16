@@ -43,4 +43,18 @@ Here we can notice that most of the order occur from 10 AM - 4 PM. This is obvio
   
 # Model
 
-Here we have the 
+1. Since we want a model that won't be too costly to run and chooses one label between multiple classes, I would implement a Naive Bayes Classifier. Then for training and testing the Naive Bayes Classifier we could take our data set and create pseudo-random training and validation subsets. We then fit the model to the training set and use the validation set as a way to evaluate the model. The loss function I would use would just be 1/0 loss since its lightweight and will still give us valuable information for how good the model is. We can then cross-validate the many different training and validation sets to get the model with the minimum loss. Also, for data preperation we would want to convert the given spreadsheet to a CSV or a pickle file that way we can use pandas to read in the data. Then we can use numpy to split the given data set as I described earlier.
+
+2. As mentioned above, using a combination of pandas and numpy we can convert the data from the spreadsheet into an array inside python and from there we can then use that data to fit/train the model.
+
+3. I've already mentioned above how I would train my model, and then I would create a way to pickle the Naive Bayes object that has been trained and a way to create a Naive Bayes object from a pickle file.
+
+4. Wasn't able to get around to actually training and testing my model, so I do not have any visuals/metrics to share. However, if I did I would share the 1/0 loss for the model as well as some sample data points to showcase how my model preicts a customers order.
+
+# Solution Considerations
+
+Since there would be a lot of time, effort, and money spent into creating this model and incorporating it into the business, I would consider what this would actually accomplish. For example, while we might be able to create a model that pretty accurately predicts a customers order, will this increase sales? Also I would consider how long this promotion is expected to last. If we know that this promotion is only a one-time thing, it might not be worth all the work to create an accurate model since by the time its completed it may no longer be used.
+
+# Final Notes
+
+While I was not able to fully integrate a Juypter Notebook that had everything completed, hopefully I was properly able to showcase my thoughts and considerations for this assignment.
